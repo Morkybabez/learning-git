@@ -1,0 +1,215 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/*fpnt stylisation*/
+p {
+    font-style:italic;
+    margin:25px 25px 25px 25px; 
+}
+.header {
+    padding: 60px;
+    text-align: right;
+    background: black;
+    color:white;
+}
+
+.image {
+    background: url(mephoto.jpg)left,url(Sonyapic.jpg);
+    background-size:600px ;
+
+
+    background-repeat:no-repeat;
+    
+
+   /*make sure your padding is adjust right so that image can fit in the space*/
+    padding: 40px;  
+}
+
+/* style nav bar on flexbox */
+
+.navbar {
+    display: flex;
+    background-color: black;
+}
+
+/* style navbar link*/
+
+.navbar a{
+    color:rgb(245, 245, 245);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*style navbar change color on hover*/
+
+.navbar a:hover{
+    background-color: rgba(31, 124, 185, 0.884);
+    color: black;
+}
+
+/*column container*/
+.section {
+display:flex;
+flex-wrap:wrap;
+}
+
+/*Left side section only*/
+.left {
+    flex: 15%;
+    background-color: rgb(68, 69, 70);
+    padding: 25px;
+}
+.image2 {
+    background:url(img.jpg);
+    background-repeat:no-repeat;
+    background-size: 200px ;
+    padding: 50%;
+}
+.image3 {
+    background:url(img5.jpg);
+    background-repeat:no-repeat;
+    background-size: 200px ;
+    padding: 50%;
+}
+.image4 {
+    background:url(img4.jpg);
+    background-repeat:no-repeat;
+    background-size: 200px ;
+    padding: 50%;
+}
+
+
+
+
+
+
+/*center section only*/
+.center {
+flex: 25%;
+background-color: rgb(98, 192, 216);
+padding: 10px ;
+}
+
+.Rowandale {
+    background:url(Rowandale.jpg);
+    background-repeat:no-repeat;
+    background-size:400px ;
+    padding: 60%;
+
+}
+.rowandaleicon {
+    background:url(rowandaleicon..jpg);
+    background-repeat:no-repeat;
+    background-size: 400px ;
+    padding: 35%;
+}
+
+input[type=text], input[type=email]
+{
+    padding: 2px 2px;
+    margin:8px 0;
+    border: none;
+    border-bottom: 2px solid rgb(2, 2, 2);
+}
+/*right side section*/
+
+.right {
+    flex: 50%;
+    background-color: rgb(98, 192, 216);
+    padding: 20px;
+}
+ 
+/*transition slides*/
+#example{
+    background:black;
+    padding: 10px;
+    width: 45%;
+    color:#fff;
+    
+    transition-property: width;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+  }
+  
+  #example:hover{
+    width: 50%;
+  }
+
+
+/* Multiple images for mid section */
+
+.Korowai {
+    background:url(k2.jpg),url(k4.jpg) top center no-repeat, url(k1.jpg) top right no-repeat;
+    background-repeat:no-repeat;
+    background-size: 250px ;
+    padding: 15%;
+    
+}
+
+#animation {
+    width: 200px;
+    height: 30px;
+    background-color: red;
+    position: relative;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+  }
+  
+    @keyframes animation {
+        0%   {background-color:red; left:0px; right:0px;}
+        25%  {background-color:yellow; left:200px; right:30px;}
+        50%  {background-color:blue; left:200px; right:2000px;}
+        75%  {background-color:green; left:200px; right:2000px;}
+        100% {background-color:red; left:0px; right:100px;
+            
+      }
+}
+/* multiple images for bottom section */
+
+.tattoo {
+    background:url(tat3.jpg), url(tat2.jpg) top center, url(tat1.jpg) top right;
+    background-repeat:no-repeat;
+background-size: 250px;
+    padding: 80px;
+
+}
+
+/*footer*/
+.footer {
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #553175;
+
+    color: white;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+
+        font-size: 12px;
+
+    }
+
+}
+@media screen and (max-width: 768px)  {
+    .navbar, .section {
+        flex-direction: column;
+    }
+}
